@@ -1,0 +1,126 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="nilai_analisis"/>
+        <attribute name="authors" value="ASUS"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-10-17 02:55:45 PM"/>
+        <attribute name="created" value="QVNVUztMQVBUT1AtQjJUOFMzM1Y7MjAyNS0xMC0xNzswMjoxNjozMyBQTTsyNjI5"/>
+        <attribute name="edited" value="QVNVUztMQVBUT1AtQjJUOFMzM1Y7MjAyNS0xMC0xNzswMjo1NTo0NSBQTTsxOzI3NDM="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="n, tertinggi, terendah, i" type="Integer" array="False" size=""/>
+            <declare name="ratarata" type="Real" array="False" size=""/>
+            <declare name="nilai" type="Integer" array="True" size="4"/>
+            <for variable="i" start="0" end="3" direction="inc" step="1">
+                <input variable="nilai[i]"/>
+            </for>
+            <assign variable="ratarata" expression="(nilai[0]+nilai[1]+nilai[2]+nilai[3])/4"/>
+            <if expression="nilai[0]&gt;nilai[1]">
+                <then>
+                    <if expression="nilai[0]&gt;nilai[2]">
+                        <then>
+                            <if expression="nilai[0]&gt;nilai[3]">
+                                <then>
+                                    <assign variable="Tertinggi" expression="nilai[0]"/>
+                                </then>
+                                <else>
+                                    <assign variable="Tertinggi" expression="nilai[3]"/>
+                                </else>
+                            </if>
+                        </then>
+                        <else>
+                            <if expression="nilai[2]&gt;nilai[3]">
+                                <then>
+                                    <assign variable="Tertinggi" expression="nilai[2]"/>
+                                </then>
+                                <else>
+                                    <assign variable="Tertinggi" expression="nilai[3]"/>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </then>
+                <else>
+                    <if expression="nilai[1]&gt;nilai[2]">
+                        <then>
+                            <if expression="nilai[1]&gt;nilai[3]">
+                                <then>
+                                    <assign variable="Tertinggi" expression="nilai[1]"/>
+                                </then>
+                                <else>
+                                    <assign variable="Tertinggi" expression="nilai[3]"/>
+                                </else>
+                            </if>
+                        </then>
+                        <else>
+                            <if expression="nilai[2]&gt;nilai[3]">
+                                <then>
+                                    <assign variable="Tertinggi" expression="nilai[2]"/>
+                                </then>
+                                <else>
+                                    <assign variable="Tertinggi" expression="nilai[3]"/>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+            <if expression="nilai[0]&lt;nilai[1]">
+                <then>
+                    <if expression="nilai[0]&lt;nilai[2]">
+                        <then>
+                            <if expression="nilai[0]&lt;nilai[3]">
+                                <then>
+                                    <assign variable="Terendah" expression="nilai[0]"/>
+                                </then>
+                                <else>
+                                    <assign variable="Terendah" expression="nilai[3]"/>
+                                </else>
+                            </if>
+                        </then>
+                        <else>
+                            <if expression="nilai[2]&lt;nilai[3]">
+                                <then>
+                                    <assign variable="Terendah" expression="nilai[2]"/>
+                                </then>
+                                <else>
+                                    <assign variable="Terendah" expression="nilai[3]"/>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </then>
+                <else>
+                    <if expression="nilai[1]&lt;nilai[2]">
+                        <then>
+                            <if expression="nilai[1]&lt;nilai[3]">
+                                <then>
+                                    <assign variable="Terendah" expression="nilai[1]"/>
+                                </then>
+                                <else>
+                                    <assign variable="Terendah" expression="nilai[3]"/>
+                                </else>
+                            </if>
+                        </then>
+                        <else>
+                            <if expression="nilai[2]&lt;nilai[3]">
+                                <then>
+                                    <assign variable="Terendah" expression="nilai[2]"/>
+                                </then>
+                                <else>
+                                    <assign variable="Terendah" expression="nilai[3]"/>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+            <output expression="&quot;Rata-rata = &quot; &amp; ratarata" newline="True"/>
+            <output expression="&quot;Tertinggi = &quot; &amp; Tertinggi" newline="True"/>
+            <output expression="&quot;Terendah = &quot; &amp; Terendah" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

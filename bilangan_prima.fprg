@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="bilangan_prima"/>
+        <attribute name="authors" value="ASUS"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-10-17 04:40:37 PM"/>
+        <attribute name="created" value="QVNVUztMQVBUT1AtQjJUOFMzM1Y7MjAyNS0xMC0xNzswNDowNDoyOSBQTTsyNjMz"/>
+        <attribute name="edited" value="QVNVUztMQVBUT1AtQjJUOFMzM1Y7MjAyNS0xMC0xNzswNDowNzo1MyBQTTsyO0FTVVM7TEFQVE9QLUIyVDhTMzNWOzIwMjUtMTAtMTc7MDE6NDM6MjMgUE07ZmFrdG9yaWFsLmZwcmc7NjkyMQ=="/>
+        <attribute name="edited" value="QVNVUztMQVBUT1AtQjJUOFMzM1Y7MjAyNS0xMC0xNzswNDo0MDozNyBQTTsyOzI3NDE="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="n, result, faktor, i" type="Integer" array="False" size=""/>
+            <declare name="isPrima" type="String" array="False" size=""/>
+            <assign variable="faktor" expression="0"/>
+            <input variable="n"/>
+            <assign variable="result" expression="isPrima(n)"/>
+            <output expression="result" newline="True"/>
+        </body>
+    </function>
+    <function name="isPrima" type="Integer" variable="result">
+        <parameters>
+            <parameter name="inX" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="result, isPrima" type="Integer" array="False" size=""/>
+            <if expression="inX mod 2 = 0">
+                <then>
+                    <assign variable="result" expression="2"/>
+                </then>
+                <else>
+                    <assign variable="result" expression="inX*isPrima"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

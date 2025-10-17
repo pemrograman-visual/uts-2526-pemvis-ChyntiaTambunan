@@ -1,0 +1,28 @@
+import java.util.*;
+import java.lang.Math;
+
+public class bilangan_prima {
+    private static Scanner input = new Scanner(System.in);
+
+    public static void main(String[] args) {
+        int n, result, faktor, i;
+        String isPrima;
+
+        faktor = 0;
+        n = Integer.parseInt(input.nextLine());
+        result = isPrima(n);
+        System.out.println(result);
+    }
+    
+    public static int isPrima(int inX) {
+        int result, isPrima;
+
+        if (inX % 2 == 0) {
+            result = 2;
+        } else {
+            result = inX * isPrima;
+        }
+        
+        return result;
+    }
+}
